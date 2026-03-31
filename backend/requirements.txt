@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+requests
+pillow
+pdf2image
+pytesseract
+alibabacloud_ocr_api20210707
+dashscope
+pinecone
+stripe
