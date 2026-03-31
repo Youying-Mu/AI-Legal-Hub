@@ -35,9 +35,11 @@ export default function Home() {
     try {
       const formData = new FormData();
       if (description) formData.append("description", description);
-      if (file) formData.append("file", file);  // 字段名必须为 'file'
+      if (file) formData.append("file", file);
       
-      const res = await axios.post("http://127.0.0.1:8000/api/analyze", formData, {
+      // 使用环境变量中的后端地址，如果未定义则回退到本地开发地址
+      const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
+      const res = await axios.post(`${apiBaseUrl}/api/analyze`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       sessionStorage.setItem("analysisResult", JSON.stringify(res.data));
