@@ -1,0 +1,28 @@
+[
+  {
+    "condition": {
+      "field": "payment_term",
+      "operator": "contains",
+      "value": "逾期",
+      "clause_name": "付款条款"
+    },
+    "reason": "付款条款中存在逾期描述，但未明确逾期利息计算方式，可能导致争议。",
+    "risk": {
+      "level": "high",
+      "suggestion": "建议明确逾期付款的违约金计算标准，例如每日万分之五。"
+    }
+  },
+  {
+    "condition": {
+      "field": "dispute_clause",
+      "operator": "contains",
+      "value": "仲裁",
+      "clause_name": "争议解决条款"
+    },
+    "reason": "争议解决条款约定仲裁，但未指定仲裁机构，可能导致无效。",
+    "risk": {
+      "level": "mid",
+      "suggestion": "建议明确仲裁机构名称，如中国国际经济贸易仲裁委员会。"
+    }
+  }
+]

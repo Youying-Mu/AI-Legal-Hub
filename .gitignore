@@ -1,0 +1,26 @@
+# Python 后端
+backend/venv/
+backend/__pycache__/
+backend/.env
+backend/*.pyc
+backend/*.db
+backend/*.sqlite3
+
+# Node 前端
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+frontend/out/
+frontend/build/
+frontend/.vercel
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
