@@ -114,7 +114,7 @@ def call_llm(history, temperature=0.1):
     if Generation is None:
         raise RuntimeError("dashscope 未安装")
     response = Generation.call(
-        model="qwen-plus",
+        model="qwen3.7-plus",
         messages=history,
         temperature=temperature,
         result_format='message',
@@ -180,7 +180,7 @@ def react_agent(contract_text, max_steps=10):
         
         # 调用大模型
         response = Generation.call(
-            model='qwen-plus',
+            model='qwen3.7-plus',
             messages=messages,
             result_format='message',
             temperature=0.1,
